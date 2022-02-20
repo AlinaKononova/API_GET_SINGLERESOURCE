@@ -1,4 +1,4 @@
-import API.ResponseBodyFull;
+import API.ResponseBodySupport;
 import API.Specification;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -15,13 +15,13 @@ public class TestAPIGetSingleResource {
 
     String expectedText = "To keep ReqRes free, contributions towards server costs are appreciated!";
 
-    ResponseBodyFull actualText = given()
+    ResponseBodySupport actualText = given()
             .when()
             .get("/api/unknown/2")
             .then().log().all()
-            .extract().as(ResponseBodyFull.class);
+            .extract().body().jsonPath().getObject("support", ResponseBodySupport.class);
 
-    Assert.assertEquals(actualText.getSupport().getText(), expectedText);
+    Assert.assertEquals(actualText.getText(), expectedText);
 
   }
 
