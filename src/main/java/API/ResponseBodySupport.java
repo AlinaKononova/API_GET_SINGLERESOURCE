@@ -1,3 +1,5 @@
+package API;
+
 public class ResponseBodySupport {
   private String url;
   private String text;

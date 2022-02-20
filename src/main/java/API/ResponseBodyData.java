@@ -1,3 +1,5 @@
+package API;
+
 public class ResponseBodyData {
   private Integer id;
   private String name;

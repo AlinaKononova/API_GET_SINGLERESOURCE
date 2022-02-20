@@ -1,3 +1,7 @@
+package API;
+
+import API.ResponseBodyData;
+
 public class ResponseBodyFull {
   private ResponseBodyData data;
   private ResponseBodySupport support;
