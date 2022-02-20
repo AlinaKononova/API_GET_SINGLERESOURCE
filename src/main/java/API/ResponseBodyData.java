@@ -7,6 +7,9 @@ public class ResponseBodyData {
   private String color;
   private String pantone_value;
 
+  public ResponseBodyData() {
+  }
+
   public ResponseBodyData(Integer id, String name, Integer year, String color, String pantone_value) {
     this.id = id;
     this.name = name;

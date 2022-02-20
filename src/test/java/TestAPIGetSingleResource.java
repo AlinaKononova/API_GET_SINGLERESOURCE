@@ -2,11 +2,10 @@ import API.ResponseBodyFull;
 import API.Specification;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import static io.restassured.RestAssured.given;
 
 public class TestAPIGetSingleResource {
-  
+
   private final static String URL = "https://reqres.in/";
 
   @Test
